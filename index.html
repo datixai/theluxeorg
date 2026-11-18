@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Luxe Organization | Coming Soon</title>
+<meta name="description" content="The Luxe Organization. Vision 2035: EV charging, data centres, artificial intelligence, AI-backed solar power, healthcare and broadband. Our new website is coming soon.">
+<meta property="og:title" content="The Luxe Organization | Vision 2035">
+<meta property="og:description" content="Our new website is coming soon.">
+<meta property="og:image" content="/assets/logo-gold.png">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0b0c;
+    --ink: #f5f0e6;
+    --muted: #a39d92;
+    --gold: #c9a961;
+    --gold-soft: rgba(201, 169, 97, .35);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Jost", system-ui, sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% 38%, rgba(201,169,97,.10), transparent 70%),
+      radial-gradient(ellipse 120% 80% at 50% 120%, rgba(201,169,97,.06), transparent 60%);
+  }
+  .frame {
+    position: fixed; inset: 18px;
+    border: 1px solid var(--gold-soft);
+    pointer-events: none;
+  }
+  main {
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 72px 24px 32px;
+  }
+  .logo { width: min(560px, 86vw); height: auto; animation: rise 1.4s ease .2s forwards; }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    letter-spacing: .04em;
+    margin-top: 56px;
+    animation: rise 1.4s ease .6s forwards;
+  }
+  h1 em { color: var(--gold); font-style: italic; }
+  .lead {
+    max-width: 640px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: clamp(.98rem, 1.6vw, 1.08rem);
+    line-height: 1.75;
+    animation: rise 1.4s ease .9s forwards;
+  }
+  .sectors {
+    list-style: none;
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px 12px;
+    margin-top: 40px;
+    max-width: 760px;
+    animation: rise 1.4s ease 1.2s forwards;
+  }
+  .sectors li {
+    border: 1px solid var(--gold-soft);
+    color: var(--ink);
+    padding: 9px 18px;
+    font-size: .76rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+  footer {
+    text-align: center;
+    padding: 28px 24px 44px;
+    color: var(--muted);
+    font-size: .74rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+  footer span { color: var(--gold); white-space: nowrap; }
+  @keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  @media (max-width: 520px) {
+    .frame { inset: 10px; }
+    h1 { margin-top: 40px; }
+    .sectors li { font-size: .68rem; padding: 8px 12px; letter-spacing: .14em; }
+  }
+</style>
+</head>
+<body>
+  <div class="frame" aria-hidden="true"></div>
+  <main>
+    <img class="logo" src="/assets/logo-gold.png" alt="The Luxe Organization, Vision 2035">
+    <h1>Something <em>remarkable</em> is coming</h1>
+    <p class="lead">A UK holding company with offices in the Middle East, investing in the infrastructure of tomorrow. Starting in Pakistan and expanding worldwide, by 2035.</p>
+    <ul class="sectors" aria-label="Vision 2035 sectors">
+      <li>EV Charging</li>
+      <li>Data Centres</li>
+      <li>Artificial Intelligence</li>
+      <li>AI Solar Grids</li>
+      <li>Healthcare</li>
+      <li>Broadband</li>
+    </ul>
+  </main>
+  <footer>&copy; 2026 The Luxe Organization &middot; <span>Vision 2035</span></footer>
+</body>
+</html>
