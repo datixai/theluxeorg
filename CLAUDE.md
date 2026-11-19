@@ -9,7 +9,8 @@ Design: layout and mood inspired by a luxury corporate site the client named (wh
 
 ## Status (19 Nov 2026)
 - Done: multi-page Next.js site (Home, Vision 2035, Sectors + 6 sector pages, About, Roadmap, Offices, News + articles, Contact), WhatsApp floating button, admin panel (/admin: content, news, messages, uploads), technical SEO (sitemap, robots with AI crawlers allowed, llms.txt, Organization schema, Open Graph image), optional Google Analytics.
-- Waiting on: client content (see CONTENT_TODO.md), Firebase project + Vercel env vars, Vercel Blob store, decision on how the full site replaces the coming-soon page.
+- Live: theluxeorganization.com serves the full site from datixai/theluxeorg main (replaced the coming-soon page). vercel.json forces the Next.js preset (the old project preset 'Other' made every route 404).
+- Waiting on: client content (see CONTENT_TODO.md), Vercel env vars (ADMIN_*, FIREBASE_SERVICE_ACCOUNT), Vercel Blob store.
 
 ## Key decisions
 1. Content lives in one Firestore document `site/content` (seeded from src/lib/defaultContent.ts); contact messages in collection `messages`. Without Firebase, dev falls back to data/*.json (gitignored). On Vercel without Firebase, saves fail with a clear message.
@@ -42,9 +43,8 @@ coming-soon/         separate repo (coming-soon page), ignored here
 - Office photos imply London and Dubai until the client confirms cities.
 
 ## Next steps
-1. Agree with Ahmed how to publish over the coming-soon page (branch / preview first).
-2. Create Firebase project and Vercel Blob store; add env vars on Vercel.
-3. Client content pass (CONTENT_TODO.md), then Search Console, Analytics, Business Profile.
+1. Create Firebase project and Vercel Blob store; add env vars on Vercel.
+2. Client content pass (CONTENT_TODO.md), then Search Console, Analytics, Business Profile.
 
 ## Rules for this project
 - No em or en dashes anywhere. No decorative dash or hairline before labels.
@@ -53,3 +53,4 @@ coming-soon/         separate repo (coming-soon page), ignored here
 
 ## Progress log
 - 2026-11-19: Logo cut into transparent variants; first one-page draft replaced by the full multi-page v1 with admin panel, photos, WhatsApp button and Package 1 SEO.
+- 2026-11-19: Pushed to datixai/theluxeorg main (merged over the coming-soon commit, no force push); added vercel.json framework nextjs; live site checked, all pages 200.
