@@ -1,0 +1,12 @@
+Photos from Unsplash, free to use under the Unsplash License (https://unsplash.com/license).
+Unsplash image ids (open https://images.unsplash.com/<id> to view the source):
+hero-london-dusk.jpg       photo-1767477130917-7ab4591d1977
+office-uk.jpg              photo-1632860644196-e1e464596ea3
+office-middle-east.jpg     photo-1739900292622-a7f860175aad
+pakistan.jpg               photo-1623261216813-fbbe4fb7df44
+sector-ev.jpg              photo-1615829386703-e2bb66a7cb7d
+sector-datacentres.jpg     photo-1580106815433-a5b1d1d53d85
+sector-ai.jpg              photo-1757466762489-52fea38071ad
+sector-solar.jpg           photo-1508514177221-188b1cf16e9d
+sector-healthcare.jpg      photo-1719934398679-d764c1410770
+sector-broadband.jpg       photo-1656082644803-7e2decb1ca98
