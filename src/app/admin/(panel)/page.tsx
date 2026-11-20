@@ -33,7 +33,7 @@ export default async function Dashboard() {
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         <Link href="/admin/content" className="rounded-lg border border-mist bg-white p-6 shadow-sm hover:border-gold-deep">
           <h2 className="font-display text-xl">Website content</h2>
-          <p className="mt-2 text-sm text-ink/60">Home page, About, Vision 2035, the six sectors, roadmap, offices, WhatsApp number and email.</p>
+          <p className="mt-2 text-sm text-ink/60">Home page, About, Vision 2035, the six sectors, roadmap, offices and the public email.</p>
         </Link>
         <Link href="/admin/news" className="rounded-lg border border-mist bg-white p-6 shadow-sm hover:border-gold-deep">
           <h2 className="font-display text-xl">News</h2>

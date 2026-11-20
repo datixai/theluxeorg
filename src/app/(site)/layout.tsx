@@ -1,8 +1,7 @@
 import { getContent } from "@/lib/content";
-import { organizationJsonLd, waLink } from "@/lib/seo";
+import { organizationJsonLd } from "@/lib/seo";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 
 export const revalidate = 3600;
 
@@ -20,7 +19,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       />
       <main>{children}</main>
       <SiteFooter content={content} />
-      <WhatsAppButton href={waLink(content)} />
     </>
   );
 }

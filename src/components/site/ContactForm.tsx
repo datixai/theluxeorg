@@ -19,7 +19,7 @@ const field =
   "w-full border-0 border-b border-ink/20 bg-transparent px-0 py-3 text-ink placeholder:text-ink/35 transition-colors focus:border-gold-deep focus:outline-none focus:ring-0";
 const labelCls = "label-caps text-[0.62rem] text-stone";
 
-export function ContactForm({ waHref }: { waHref: string }) {
+export function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
@@ -53,12 +53,9 @@ export function ContactForm({ waHref }: { waHref: string }) {
         <p className="eyebrow">Message received</p>
         <p className="mt-5 font-display text-3xl">Thank you{name ? `, ${name}` : ""}.</p>
         <p className="mt-4 max-w-md leading-relaxed text-ink/70">
-          Our team will reply by email. For a faster response you can also reach us on WhatsApp.
+          Our team will reply to you by email.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
-          <a href={waHref} target="_blank" rel="noopener noreferrer" className="label-caps bg-ink px-6 py-3 text-[0.66rem] text-white hover:bg-gold-deep">
-            WhatsApp us
-          </a>
           <button type="button" onClick={() => setState("idle")} className="label-caps text-[0.66rem] text-gold-deep hover:text-ink">
             Send another message
           </button>

@@ -2,11 +2,7 @@ export interface SiteSettings {
   siteName: string;
   tagline: string;
   announcement: string;
-  /** WhatsApp number in international format, digits only (e.g. 447786100650). */
-  whatsapp: string;
-  whatsappMessage: string;
   email: string;
-  phone: string;
 }
 
 export interface HomeContent {
@@ -71,7 +67,6 @@ export interface Office {
   role: string;
   city: string;
   address: string;
-  phone: string;
   email: string;
   image: string;
 }

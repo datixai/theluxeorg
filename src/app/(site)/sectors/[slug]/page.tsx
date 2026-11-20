@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getContent } from "@/lib/content";
-import { lines, paragraphs, waLink } from "@/lib/seo";
+import { lines, paragraphs } from "@/lib/seo";
 import { Img } from "@/components/Img";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/site/PageHero";
@@ -61,14 +61,9 @@ export default async function SectorPage({ params }: { params: Promise<{ slug: s
             <Link href="/contact" className="label-caps bg-ink px-6 py-4 text-center text-[0.66rem] text-white hover:bg-gold-deep">
               Discuss a partnership
             </Link>
-            <a
-              href={waLink(c, `Hello, I would like to know more about ${s.title} in Vision 2035.`)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="label-caps border border-ink/25 px-6 py-4 text-center text-[0.66rem] hover:border-gold-deep hover:text-gold-deep"
-            >
-              Ask on WhatsApp
-            </a>
+            <Link href="/vision-2035" className="label-caps border border-ink/25 px-6 py-4 text-center text-[0.66rem] hover:border-gold-deep hover:text-gold-deep">
+              All Vision 2035 sectors
+            </Link>
           </div>
         </Reveal>
       </section>

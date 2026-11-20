@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Content } from "@/lib/types";
-import { waLink } from "@/lib/seo";
 import { Wordmark } from "../Wordmark";
 
 const COMPANY = [
@@ -56,17 +55,10 @@ export function SiteFooter({ content }: { content: Content }) {
                 </a>
               </li>
             )}
-            {settings.phone && (
-              <li>
-                <a href={`tel:${settings.phone.replace(/\s/g, "")}`} className="transition-colors hover:text-gold">
-                  {settings.phone}
-                </a>
-              </li>
-            )}
             <li>
-              <a href={waLink(content)} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold">
-                WhatsApp
-              </a>
+              <Link href="/contact" className="transition-colors hover:text-gold">
+                Contact form
+              </Link>
             </li>
             <li className="text-white/50">United Kingdom · Middle East</li>
           </ul>

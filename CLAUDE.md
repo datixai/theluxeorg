@@ -8,7 +8,7 @@ Corporate website for The Luxe Organization (UK holding company with Middle East
 Design: layout and mood inspired by a luxury corporate site the client named (white header with centred logo, black/gold, full-bleed photo mosaic with spaced capital labels). Nothing copied: own logo, copy, photos and code.
 
 ## Status (19 Nov 2026)
-- Done: multi-page Next.js site (Home, Vision 2035, Sectors + 6 sector pages, About, Roadmap, Offices, News + articles, Contact), WhatsApp floating button, admin panel (/admin: content, news, messages, uploads), technical SEO (sitemap, robots with AI crawlers allowed, llms.txt, Organization schema, Open Graph image), optional Google Analytics.
+- Done: multi-page Next.js site (Home, Vision 2035, Sectors + 6 sector pages, About, Roadmap, Offices, News + articles, Contact), admin panel (/admin: content, news, messages, uploads), technical SEO (sitemap, robots with AI crawlers allowed, llms.txt, Organization schema, Open Graph image), optional Google Analytics.
 - Live: theluxeorganization.com serves the full site from datixai/theluxeorg main (replaced the coming-soon page). vercel.json forces the Next.js preset (the old project preset 'Other' made every route 404).
 - Waiting on: client content (see CONTENT_TODO.md), Vercel env vars (ADMIN_*, FIREBASE_SERVICE_ACCOUNT), Vercel Blob store.
 
@@ -22,11 +22,11 @@ Design: layout and mood inspired by a luxury corporate site the client named (wh
 
 ## Folder structure
 ```
-src/app/(site)/      public pages (layout has header, footer, WhatsApp button, JSON-LD)
+src/app/(site)/      public pages (layout has header, footer, JSON-LD)
 src/app/admin/       login + (panel)/ dashboard, content, news, messages, media
 src/app/api/         auth, content, contact, messages, upload
 src/lib/             types, defaultContent (seed copy), content/messages stores, firebase, auth, seo
-src/components/site  header, footer, mosaic, page hero, contact form, WhatsApp
+src/components/site  header, footer, mosaic, page hero, contact form
 src/components/admin editors and fields
 public/brand         logo variants and icons; public/images photos (+ CREDITS.txt)
 coming-soon/         separate repo (coming-soon page), ignored here
@@ -47,6 +47,7 @@ coming-soon/         separate repo (coming-soon page), ignored here
 2. Client content pass (CONTENT_TODO.md), then Search Console, Analytics, Business Profile.
 
 ## Rules for this project
+- No phone or WhatsApp numbers anywhere on the website (client request, 20 Nov 2026). Contact is by email and the contact form only.
 - No em or en dashes anywhere. No decorative dash or hairline before labels.
 - Keep this project's files only in this folder.
 - Git: commit as the local identity, no Claude/AI attribution, ask before every push. Never push private files to the public repo.
@@ -54,3 +55,4 @@ coming-soon/         separate repo (coming-soon page), ignored here
 ## Progress log
 - 2026-11-19: Logo cut into transparent variants; first one-page draft replaced by the full multi-page v1 with admin panel, photos, WhatsApp button and Package 1 SEO.
 - 2026-11-19: Pushed to datixai/theluxeorg main (merged over the coming-soon commit, no force push); added vercel.json framework nextjs; live site checked, all pages 200.
+- 2026-11-20: Client asked for no phone or WhatsApp details: removed the WhatsApp floating button, all WhatsApp links, the number and the phone fields (site and offices, incl. admin).

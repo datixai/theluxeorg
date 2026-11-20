@@ -54,7 +54,7 @@ export function ContentEditor() {
       </div>
 
       {tab === "settings" && (
-        <Card title="Site settings" description="Shown in the header, footer, contact page and WhatsApp button.">
+        <Card title="Site settings" description="Shown in the header, footer and contact page.">
           <Grid2>
             <Field label="Company name">
               <TextInput value={c.settings.siteName} onChange={(v) => set("settings", { ...c.settings, siteName: v })} />
@@ -67,17 +67,8 @@ export function ContentEditor() {
             <TextInput value={c.settings.announcement} onChange={(v) => set("settings", { ...c.settings, announcement: v })} />
           </Field>
           <Grid2>
-            <Field label="WhatsApp number" hint="International format, e.g. +44 7786 100650">
-              <TextInput value={c.settings.whatsapp} onChange={(v) => set("settings", { ...c.settings, whatsapp: v })} />
-            </Field>
-            <Field label="WhatsApp first message" hint="Pre-filled text when a visitor opens WhatsApp.">
-              <TextInput value={c.settings.whatsappMessage} onChange={(v) => set("settings", { ...c.settings, whatsappMessage: v })} />
-            </Field>
             <Field label="Public email">
               <TextInput type="email" value={c.settings.email} onChange={(v) => set("settings", { ...c.settings, email: v })} />
-            </Field>
-            <Field label="Public phone" hint="Leave empty to hide.">
-              <TextInput value={c.settings.phone} onChange={(v) => set("settings", { ...c.settings, phone: v })} />
             </Field>
           </Grid2>
         </Card>
@@ -257,9 +248,6 @@ export function ContentEditor() {
                   </Field>
                   <Field label="City">
                     <TextInput value={o.city} onChange={(v) => patch({ city: v })} />
-                  </Field>
-                  <Field label="Phone">
-                    <TextInput value={o.phone} onChange={(v) => patch({ phone: v })} />
                   </Field>
                   <Field label="Email">
                     <TextInput value={o.email} onChange={(v) => patch({ email: v })} />

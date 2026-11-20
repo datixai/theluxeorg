@@ -20,12 +20,6 @@ export function lines(text: string): string[] {
     .filter(Boolean);
 }
 
-export function waLink(c: Content, text?: string): string {
-  const digits = c.settings.whatsapp.replace(/\D/g, "");
-  const msg = encodeURIComponent(text ?? c.settings.whatsappMessage);
-  return `https://wa.me/${digits}?text=${msg}`;
-}
-
 export function formatDate(iso: string): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
@@ -44,7 +38,6 @@ export function organizationJsonLd(c: Content) {
     description: DEFAULT_DESCRIPTION,
     slogan: "Vision 2035",
     email: c.settings.email || undefined,
-    telephone: c.settings.phone || undefined,
     areaServed: ["Pakistan", "United Kingdom", "Middle East", "Worldwide"],
     knowsAbout: c.sectors.map((s) => s.title),
     contactPoint: [

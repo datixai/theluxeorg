@@ -58,7 +58,7 @@ export async function POST(req: Request) {
     await addMessage({ name, email, organisation, interest, message });
   } catch {
     return NextResponse.json(
-      { error: "Sorry, we could not send your message right now. Please email or WhatsApp us instead." },
+      { error: "Sorry, we could not send your message right now. Please email us instead." },
       { status: 503 },
     );
   }

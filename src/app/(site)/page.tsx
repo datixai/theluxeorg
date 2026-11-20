@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getContent } from "@/lib/content";
-import { formatDate, waLink } from "@/lib/seo";
+import { formatDate } from "@/lib/seo";
 import { Img } from "@/components/Img";
 import { Reveal } from "@/components/Reveal";
 import { SectorMosaic } from "@/components/site/SectorMosaic";
@@ -168,14 +168,9 @@ export default async function HomePage() {
               <Link href="/contact" className="label-caps w-full bg-gold px-9 py-4 text-[0.7rem] text-ink hover:bg-gold-light sm:w-auto">
                 Contact us
               </Link>
-              <a
-                href={waLink(c)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="label-caps w-full border border-white/40 px-9 py-4 text-[0.7rem] text-white hover:border-gold hover:text-gold sm:w-auto"
-              >
-                WhatsApp
-              </a>
+              <Link href="/vision-2035" className="label-caps w-full border border-white/40 px-9 py-4 text-[0.7rem] text-white hover:border-gold hover:text-gold sm:w-auto">
+                Explore Vision 2035
+              </Link>
             </div>
           </Reveal>
         </div>

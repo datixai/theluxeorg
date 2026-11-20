@@ -40,16 +40,6 @@ export default async function OfficesPage() {
                   <dt className="sr-only">Address</dt>
                   <dd className="whitespace-pre-line">{o.address || <span className="italic text-stone">Address to follow</span>}</dd>
                 </div>
-                {o.phone && (
-                  <div>
-                    <dt className="sr-only">Phone</dt>
-                    <dd>
-                      <a href={`tel:${o.phone.replace(/\s/g, "")}`} className="hover:text-gold-deep">
-                        {o.phone}
-                      </a>
-                    </dd>
-                  </div>
-                )}
                 {o.email && (
                   <div>
                     <dt className="sr-only">Email</dt>

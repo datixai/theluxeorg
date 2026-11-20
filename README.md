@@ -11,7 +11,7 @@ npm run dev -- -p 3210
 Website: http://localhost:3210, admin panel: http://localhost:3210/admin
 
 ## Admin panel
-Edit all page text and photos, the six sectors, roadmap, offices, WhatsApp number and email; publish news; read contact form messages; upload photos, PDFs and short videos.
+Edit all page text and photos, the six sectors, roadmap, offices, public email; publish news; read contact form messages; upload photos, PDFs and short videos.
 
 ## Deploy (Vercel)
 Framework preset: Next.js. Add the environment variables from `.env.example`:
